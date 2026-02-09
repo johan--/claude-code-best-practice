@@ -78,34 +78,8 @@ practice makes claude perfect
 - [Andrej Karpathy Workflow](https://github.com/forrestchang/andrej-karpathy-skills)
 - [Creator of Clawd Bot Workflow](https://www.youtube.com/watch?v=8lF7HmQ_RgY)
 
-## KEYWORDS
 
-**CLI STARTUP FLAGS:**
 
-| | | | | |
-|---|---|---|---|---|
-| `--dangerously-skip-permissions` | `--model` | `--print` | `--resume` | `--continue` |
-| `--system-prompt` | `--verbose` | `--debug` | `--init` | `--max-turns` |
-
-[**See Complete List →**](reports/claude-cli-startup-flags.md)
-
-**AI TERMS:**
-
-| | | | | |
-|---|---|---|---|---|
-| Agentic Engineering | AI Slop | Context Bloat | Context Engineering | Context Rot |
-| Dumb Zone | Hallucination | Scaffolding | Orchestration | Vibe Coding |
-
-[**See Complete List →**](https://github.com/shanraisshan/claude-code-codex-cursor-gemini/blob/main/reports/ai-terms.md)
-
-**COMMANDS:**
-
-| | | | | |
-|---|---|---|---|---|
-| `/compact` | `/context` | `/model` | `/plan` | `/config` |
-| `/clear` | `/cost` | `/memory` | `/doctor` | `/rewind` |
-
-[**See Complete List →**](reports/claude-commands.md)
 
 
 ## CLAUDE CODE FEATURES INSPIRATION
@@ -131,9 +105,40 @@ practice makes claude perfect
 
 See [weather-orchestration-architecture](weather-orchestration/weather-orchestration-architecture.md) for implementation details.
 
-## SETTINGS
+## AI TERMS
 
-See [reports/claude-settings.md](reports/claude-settings.md) for a comprehensive reference of all available `settings.json` configuration options.
+| | | | | |
+|---|---|---|---|---|
+| Agentic Engineering | AI Slop | Context Bloat | Context Engineering | Context Rot |
+| Dumb Zone | Hallucination | Scaffolding | Orchestration | Vibe Coding |
+
+[**See Complete List →**](https://github.com/shanraisshan/claude-code-codex-cursor-gemini/blob/main/reports/ai-terms.md)
+
+## CLI STARTUP FLAGS
+
+| | | | | |
+|---|---|---|---|---|
+| `--dangerously-skip-permissions` | `--model` | `--print` | `--resume` | `--continue` |
+| `--system-prompt` | `--verbose` | `--debug` | `--init` | `--max-turns` |
+
+[**See Complete List →**](reports/claude-cli-startup-flags.md)
+
+## CLAUDE COMMANDS
+
+| | | | | |
+|---|---|---|---|---|
+| `/compact` | `/context` | `/model` | `/plan` | `/config` |
+| `/clear` | `/cost` | `/memory` | `/doctor` | `/rewind` |
+
+[**See Complete List →**](reports/claude-commands.md)
+
+
+## CLAUDE SETTINGS
+
+| | |
+|---|---|
+| [**Claude Settings**](reports/claude-settings.md) | [**Global vs Project Settings**](reports/claude-global-vs-project-settings.md) |
+
 
 ## REPORTS
 
@@ -145,4 +150,5 @@ See [reports/claude-settings.md](reports/claude-settings.md) for a comprehensive
 | [Claude Code Commands Reference](reports/claude-commands.md) | Complete reference of all slash commands, keyboard shortcuts, and input modes |
 | [Claude Code Settings Reference](reports/claude-settings.md) | Comprehensive guide to all `settings.json` configuration options |
 | [CLAUDE.md Loading in Monorepos](reports/claude-md-for-larger-mono-repos.md) | Understanding ancestor vs descendant loading behavior for CLAUDE.md files |
+| [Global vs Project Settings](reports/claude-global-vs-project-settings.md) | Which features are global-only (`~/.claude/`) vs dual-scope, including Tasks and Agent Teams |
 | [Skills Discovery in Monorepos](reports/claude-skills-for-larger-mono-repos.md) | How skills are discovered and loaded in large monorepo projects |
