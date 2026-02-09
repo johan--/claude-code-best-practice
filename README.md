@@ -80,20 +80,33 @@ practice makes claude perfect
 
 ## KEYWORDS
 
-**Claude:**
+**CLI STARTUP FLAGS:**
 
-| | | |
-|---|---|---|
-| `btw` (background task) | `"defaultMode": "bypassPermissions"` | ~~`ultrathink`~~ (deprecated) |
+| | | | | |
+|---|---|---|---|---|
+| `--dangerously-skip-permissions` | `--model` | `--print` | `--resume` | `--continue` |
+| `--system-prompt` | `--verbose` | `--debug` | `--init` | `--max-turns` |
 
-**Community:**
+[**See Complete List →**](reports/claude-cli-startup-flags.md)
 
-| | | | | | |
-|---|---|---|---|---|---|
-| Agentic Workflow | AI Slop | Closing the loop | Context Bloat | Context Engineering | Context Rot |
-| Dumb Zone | Hallucination | Harness | One Shot | Orchestration | Progressive Disclosure |
-| Rate Limit Jail | Scaffolding | Slot Machine Method (save→run→revert→retry) | Stop | The Holy Trinity (Skills+Agents+Hooks) | Token Burn |
-| Vibe Coding | | | | | |
+**AI TERMS:**
+
+| | | | | |
+|---|---|---|---|---|
+| Agentic Engineering | AI Slop | Context Bloat | Context Engineering | Context Rot |
+| Dumb Zone | Hallucination | Scaffolding | Orchestration | Vibe Coding |
+
+[**See Complete List →**](https://github.com/shanraisshan/claude-code-codex-cursor-gemini/blob/main/reports/ai-terms.md)
+
+**COMMANDS:**
+
+| | | | | |
+|---|---|---|---|---|
+| `/compact` | `/context` | `/model` | `/plan` | `/config` |
+| `/clear` | `/cost` | `/memory` | `/doctor` | `/rewind` |
+
+[**See Complete List →**](reports/claude-commands.md)
+
 
 ## CLAUDE CODE FEATURES INSPIRATION
 
@@ -128,6 +141,8 @@ See [reports/claude-settings.md](reports/claude-settings.md) for a comprehensive
 |--------|-------------|
 | [Agent SDK vs CLI System Prompts](reports/claude-agent-sdk-vs-cli-system-prompts.md) | Why Claude CLI and Agent SDK outputs may differ—system prompt architecture and determinism |
 | [Browser Automation MCP Comparison](reports/claude-in-chrome-v-chrome-devtools-mcp.md) | Comparison of Playwright, Chrome DevTools, and Claude in Chrome for automated testing |
+| [Claude Code CLI Startup Flags](reports/claude-cli-startup-flags.md) | Complete reference of all CLI flags, subcommands, and environment variables |
+| [Claude Code Commands Reference](reports/claude-commands.md) | Complete reference of all slash commands, keyboard shortcuts, and input modes |
 | [Claude Code Settings Reference](reports/claude-settings.md) | Comprehensive guide to all `settings.json` configuration options |
 | [CLAUDE.md Loading in Monorepos](reports/claude-md-for-larger-mono-repos.md) | Understanding ancestor vs descendant loading behavior for CLAUDE.md files |
 | [Skills Discovery in Monorepos](reports/claude-skills-for-larger-mono-repos.md) | How skills are discovered and loaded in large monorepo projects |

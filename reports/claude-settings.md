@@ -48,6 +48,7 @@ Claude Code uses a 4-tier configuration hierarchy (highest to lowest priority):
 | `cleanupPeriodDays` | number | `30` | Sessions inactive longer than this are deleted at startup |
 | `autoUpdatesChannel` | string | `"latest"` | Release channel: `"stable"` or `"latest"` |
 | `alwaysThinkingEnabled` | boolean | `false` | Enable extended thinking by default for all sessions |
+| `skipWebFetchPreflight` | boolean | `false` | Skip WebFetch blocklist check before fetching URLs |
 
 **Example:**
 ```json
@@ -394,11 +395,15 @@ Configure bash command sandboxing for security.
 | `sandbox.autoAllowBashIfSandboxed` | boolean | `true` | Auto-approve bash when sandboxed |
 | `sandbox.excludedCommands` | array | `[]` | Commands to run outside sandbox |
 | `sandbox.allowUnsandboxedCommands` | boolean | `true` | Allow `dangerouslyDisableSandbox` |
-| `sandbox.network.allowUnixSockets` | array | `[]` | Unix sockets accessible in sandbox |
-| `sandbox.network.allowLocalBinding` | boolean | `false` | Allow binding to localhost ports (macOS) |
-| `sandbox.network.httpProxyPort` | number | - | HTTP proxy port (custom proxy) |
-| `sandbox.network.socksProxyPort` | number | - | SOCKS5 proxy port (custom proxy) |
+| `sandbox.ignoreViolations` | object | `{}` | Map of command patterns to path arrays — suppress violation warnings |
 | `sandbox.enableWeakerNestedSandbox` | boolean | `false` | Weaker sandbox for Docker (reduces security) |
+| `sandbox.network.allowUnixSockets` | array | `[]` | Specific Unix socket paths accessible in sandbox |
+| `sandbox.network.allowAllUnixSockets` | boolean | `false` | Allow all Unix sockets (overrides allowUnixSockets) |
+| `sandbox.network.allowLocalBinding` | boolean | `false` | Allow binding to localhost ports (macOS) |
+| `sandbox.network.allowedDomains` | array | `[]` | Network domain allowlist for sandbox |
+| `sandbox.network.deniedDomains` | array | `[]` | Network domain denylist for sandbox |
+| `sandbox.network.httpProxyPort` | number | - | HTTP proxy port 1-65535 (custom proxy) |
+| `sandbox.network.socksProxyPort` | number | - | SOCKS5 proxy port 1-65535 (custom proxy) |
 
 **Example:**
 ```json
@@ -429,6 +434,9 @@ Configure Claude Code plugins and marketplaces.
 | `enabledPlugins` | object | Any | Enable/disable specific plugins |
 | `extraKnownMarketplaces` | object | Any | Add custom plugin marketplaces |
 | `strictKnownMarketplaces` | array | Managed only | Allowlist of permitted marketplaces |
+| `skippedMarketplaces` | array | Any | Marketplaces user declined to install |
+| `skippedPlugins` | array | Any | Plugins user declined to install |
+| `pluginConfigs` | object | Any | Per-plugin MCP server configs (keyed by `plugin@marketplace`) |
 
 **Example:**
 ```json
@@ -728,6 +736,7 @@ Set environment variables for all Claude Code sessions.
 ## Sources
 
 - [Claude Code Settings Documentation](https://code.claude.com/docs/en/settings)
+- [Claude Code Settings JSON Schema](https://www.schemastore.org/claude-code-settings.json)
 - [Claude Code Configuration Guide](https://claudelog.com/configuration/)
 - [Claude Code GitHub Settings Examples](https://github.com/feiskyer/claude-code-settings)
 - [Eesel AI - Developer's Guide to settings.json](https://www.eesel.ai/blog/settings-json-claude-code)
