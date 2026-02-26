@@ -1,9 +1,7 @@
 # claude-code-best-practice
 practice makes claude perfect
 
-<a href="https://github.com/shanraisshan/claude-code-best-practice/stargazers">
-  <img src="https://img.shields.io/github/stars/shanraisshan/claude-code-best-practice?style=social" alt="GitHub Stars">
-</a>
+![Last Updated](https://img.shields.io/badge/Last_Updated-Feb_26%2C_2026_10%3A45_AM_PKT-white?style=flat&labelColor=555) <a href="https://github.com/shanraisshan/claude-code-best-practice/stargazers"><img src="https://img.shields.io/github/stars/shanraisshan/claude-code-best-practice?style=social" alt="GitHub Stars"></a>
 
 <p align="center">
   <img src="!/claude-jumping.svg" alt="Claude Code mascot jumping" width="120" height="100">
@@ -35,6 +33,18 @@ practice makes claude perfect
 - **[Permissions](https://code.claude.com/docs/en/iam)** - Fine-grained access control for tools and operations with wildcard syntax
 
 **Extension Overview:** See [Extend Claude Code](https://code.claude.com/docs/en/features-overview) for when to use each feature and how they layer together.
+
+## 💎 HIDDEN GEMS
+
+> Reports that are frequently updated as Claude Code evolves.
+
+| Report | Description |
+|--------|-------------|
+| [Claude Code Commands Reference](reports/claude-commands.md) | Complete reference of all slash commands, keyboard shortcuts, and input modes |
+| [Claude Code Settings Reference](reports/claude-settings.md) | Comprehensive guide to all `settings.json` configuration options |
+| [Agents Frontmatter Reference](reports/claude-agents-frontmatter.md) | Complete reference of all agent (`.claude/agents/`) frontmatter fields |
+| [Commands Frontmatter Reference](reports/claude-commands-frontmatter.md) | Complete reference of all command (`.claude/commands/`) frontmatter fields |
+| [Skills Frontmatter Reference](reports/claude-skills-frontmatter.md) | Complete reference of all skill (`.claude/skills/`) frontmatter fields |
 
 ## MY EXPERIENCE
 
@@ -138,14 +148,14 @@ See [weather-orchestration-architecture](weather-orchestration/weather-orchestra
 | `/compact` | `/context` | `/model` | `/plan` | `/config` |
 | `/clear` | `/cost` | `/memory` | `/doctor` | `/rewind` |
 
-[**See Complete List →**](reports/live/agent-command-skills/claude-commands.md)
+[**See Complete List →**](reports/claude-commands.md)
 
 
 ## CLAUDE SETTINGS
 
 | | |
 |---|---|
-| [**Claude Settings**](reports/live/claude-settings.md) | [**Global vs Project Settings**](reports/claude-global-vs-project-settings.md) |
+| [**Claude Settings**](reports/claude-settings.md) | [**Global vs Project Settings**](reports/claude-global-vs-project-settings.md) |
 
 
 ## MCP SERVERS FOR DAILY USE
@@ -164,19 +174,6 @@ Research (Context7/DeepWiki) -> Debug (Playwright/Chrome) -> Document (Excalidra
 
 ## REPORTS
 
-### Live Reports
-> Reports that are frequently updated as Claude Code evolves.
-
-| Report | Description |
-|--------|-------------|
-| [Claude Code Commands Reference](reports/live/agent-command-skills/claude-commands.md) | Complete reference of all slash commands, keyboard shortcuts, and input modes |
-| [Claude Code Settings Reference](reports/live/claude-settings.md) | Comprehensive guide to all `settings.json` configuration options |
-| [Agents Frontmatter Reference](reports/live/agent-command-skills/claude-agents-frontmatter.md) | Complete reference of all agent (`.claude/agents/`) frontmatter fields |
-| [Commands Frontmatter Reference](reports/live/agent-command-skills/claude-commands-frontmatter.md) | Complete reference of all command (`.claude/commands/`) frontmatter fields |
-| [Skills Frontmatter Reference](reports/live/agent-command-skills/claude-skills-frontmatter.md) | Complete reference of all skill (`.claude/skills/`) frontmatter fields |
-
-### Reports
-
 | Report | Description |
 |--------|-------------|
 | [Agent SDK vs CLI System Prompts](reports/claude-agent-sdk-vs-cli-system-prompts.md) | Why Claude CLI and Agent SDK outputs may differ—system prompt architecture and determinism |
@@ -188,3 +185,9 @@ Research (Context7/DeepWiki) -> Debug (Playwright/Chrome) -> Document (Excalidra
 | [Agent Memory Frontmatter](reports/claude-agent-memory.md) | Persistent memory scopes (`user`, `project`, `local`) for subagents — enabling agents to learn across sessions |
 | [Boris Cherny's 12 Customization Tips](reports/claude-boris-tips-feb-26.md) | 12 ways to customize Claude Code — from terminal config to plugins, agents, hooks, and output styles |
 | [Advanced Tool Use Patterns](reports/claude-advanced-tool-use.md) | Programmatic Tool Calling (PTC), Tool Search, and Tool Use Examples |
+| [Usage, Rate Limits & Extra Usage](reports/claude-usage-and-rate-limits.md) | Usage commands (`/usage`, `/extra-usage`, `/cost`), rate limits, and pay-as-you-go overflow billing |
+| [Claude Code Commands Reference](reports/claude-commands.md) | Complete reference of all slash commands, keyboard shortcuts, and input modes |
+| [Claude Code Settings Reference](reports/claude-settings.md) | Comprehensive guide to all `settings.json` configuration options |
+| [Agents Frontmatter Reference](reports/claude-agents-frontmatter.md) | Complete reference of all agent (`.claude/agents/`) frontmatter fields |
+| [Commands Frontmatter Reference](reports/claude-commands-frontmatter.md) | Complete reference of all command (`.claude/commands/`) frontmatter fields |
+| [Skills Frontmatter Reference](reports/claude-skills-frontmatter.md) | Complete reference of all skill (`.claude/skills/`) frontmatter fields |
