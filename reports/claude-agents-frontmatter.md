@@ -1,5 +1,7 @@
 # Claude Code: Agents Frontmatter Reference
 
+![Last Updated](https://img.shields.io/badge/Last_Updated-Feb%2028%2C%202026%203%3A22%20PM%20PKT-white?style=flat&labelColor=555)
+
 Quick-reference tables for defining subagents in `.claude/agents/*.md`.
 
 <table width="100%">
@@ -28,7 +30,7 @@ Quick-reference tables for defining subagents in `.claude/agents/*.md`.
 | `memory` | string | No | Persistent memory scope: `user`, `project`, or `local` |
 | `background` | boolean | No | Set to `true` to always run as a background task (default: `false`) |
 | `isolation` | string | No | Set to `"worktree"` to run in a temporary git worktree (auto-cleaned if no changes) |
-| `color` | string | No | CLI output color for visual distinction (e.g., `green`, `magenta`) |
+| `color` | string | No | CLI output color for visual distinction (e.g., `green`, `magenta`). Functional but absent from official frontmatter table — documented in interactive quickstart only |
 
 ---
 
@@ -52,7 +54,15 @@ Agents are invoked via the **Task tool**, never via bash commands:
 Task(subagent_type="agent-name", description="...", prompt="...", model="haiku")
 ```
 
-Or from a command file that delegates to an agent.
+Other invocation and management methods:
+
+| Method | Description |
+|--------|-------------|
+| `--agents '{...}'` CLI flag | Define session-scoped agents via JSON (accepts `description`, `prompt`, `tools`, `model`, etc.) |
+| `claude agents` CLI command | List all configured agents grouped by source (added v2.1.51) |
+| `/agents` interactive command | Create, edit, and manage agents interactively |
+| Command delegation | A command file (`.claude/commands/`) can delegate to an agent |
+| Agent resumption | Completed subagents can be resumed with their agent ID for follow-up work |
 
 ---
 
@@ -129,16 +139,8 @@ When multiple subagents share the same name, the higher-priority location wins:
 
 ---
 
-## Agents in This Repository
-
-| Agent | Model | Tools | Skills | Memory |
-|-------|-------|-------|--------|--------|
-| `weather` | sonnet | WebFetch, Read, Write | weather-fetcher, weather-transformer | project |
-| `presentation-curator` | sonnet | Read, Write, Edit, Grep, Glob | vibe-to-agentic-framework, presentation-structure, presentation-styling | — |
-
----
-
 ## Sources
 
 - [Create custom subagents — Claude Code Docs](https://code.claude.com/docs/en/sub-agents)
+- [CLI reference — Claude Code Docs](https://code.claude.com/docs/en/cli-reference)
 - [Claude Code CHANGELOG](https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md)
